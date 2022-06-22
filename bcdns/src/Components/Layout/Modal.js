@@ -4,7 +4,7 @@ import Button from "./Button";
 import styles from "./Modal.module.css"
 
 const Modal = (props) =>{
-    const Modal = () =>{
+    const ModalForm = () =>{
         return (
           <form className={styles.modal}>
             <label htmlFor="login">Login:</label>
@@ -24,15 +24,19 @@ const Modal = (props) =>{
           </form>
         );
     }
+    
+    const Backdrop = () =>{
+      return <div className={styles.backdrop} onClick={props.onClick} />;
+    }
 
     return (
       <Fragment>
         {ReactDOM.createPortal(
-          <div className={styles.backdrop} onClick={props.onClick} />,
+          <Backdrop />,
           document.getElementById("backdrop-root")
         )}
         {ReactDOM.createPortal(
-          <Modal />,
+          <ModalForm />,
           document.getElementById("modal-root")
         )}
       </Fragment>

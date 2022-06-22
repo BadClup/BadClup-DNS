@@ -4,7 +4,7 @@ import styles from "./Paragraph.module.css"
 const Paragraph = (props) =>{
     return (
       <div className={styles.paragraph}>
-        <h2>{props.title}</h2>
+        <p>{props.title}</p>
         <section style={props.style}>
           {props.children} <span style={props.spanStyle}>{props.desc}</span>
         </section>

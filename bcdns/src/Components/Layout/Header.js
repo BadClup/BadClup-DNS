@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./Button";
 import styles from "./Header.module.css"
-import BadClupLogo from "../../Images/Badclup.svg";
-import dnsPng from "../../Images/icons8-dns-80.png";
+import BadClupLogo from "../../Images/Badclup69.svg";
+import dnsPng from "../../Images/DNS.svg";
 
 const Header = (props) =>{
     return (
@@ -11,7 +11,7 @@ const Header = (props) =>{
           <img src={BadClupLogo} alt="BadClup" />
           <img src={dnsPng} alt="BadClup" />
         </div>
-        <Button buttonText="Login" onClick={props.onClick} />
+        <Button buttonText={props.buttonText} onClick={props.onClick} />
       </header>
     );
 }
