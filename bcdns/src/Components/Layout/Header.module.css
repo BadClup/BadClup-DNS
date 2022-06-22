@@ -1,0 +1,40 @@
+.header{
+    margin: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header *{
+    margin: 15px 0;
+}
+
+.header img{
+    max-width: 250px;
+}
+
+.header img:last-of-type{
+    filter: invert(100%);
+}
+
+.header div {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+@media only screen and (max-width: 600px){
+    .header{
+        justify-content: space-around;
+    }
+    .header div{
+        width: 250px;
+    }
+    .header div img:first-of-type{
+        width: 150px;
+    }
+    .header div img:last-of-type {
+        width: 60px;
+    }
+}

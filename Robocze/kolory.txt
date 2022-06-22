@@ -1,0 +1,9 @@
+niebieski :  #39f
+
+pomarańcz :  #ff8000
+
+żółty :  #ff3
+
+zielony :  #6f3
+
+czerwony :  #f33
