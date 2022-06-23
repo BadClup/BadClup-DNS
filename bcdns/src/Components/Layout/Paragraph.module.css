@@ -1,6 +1,5 @@
 .paragraph{
     width: 100%;
-    color: white;
     position: relative;
 }
 
@@ -27,7 +26,6 @@
     position: relative;
 
     text-shadow:
-            0 -1px 0 #fff,
             0 1px 0 #2e2e2e,
             0 2px 0 #2c2c2c,
             0 3px 0 #2a2a2a,
@@ -47,7 +45,7 @@
 }
 
 .paragraph p::after{
-    transform: scale(.5);
+    transform: scale(.3);
     content: '';
     position: absolute;
     width: auto;

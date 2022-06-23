@@ -6,6 +6,7 @@ body {
   background-color: #141920;
   line-height: 1.5;
   overflow-x: hidden;
+  color: #cfd7e2 !important;
 }
 
 ::-webkit-input-placeholder {
@@ -36,4 +37,20 @@ body {
 ::placeholder {
   color: white;
   opacity: .5;  
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141920;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(34, 95, 156);
 }

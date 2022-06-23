@@ -5,8 +5,12 @@ import styles from "./Modal.module.css"
 
 const Modal = (props) =>{
     const ModalForm = () =>{
+      const submitFormHandler = (event) =>{
+        event.preventDefault()
+      }
+
         return (
-          <form className={styles.modal}>
+          <form className={styles.modal} onSubmit={submitFormHandler}>
             <label htmlFor="login">Login:</label>
             <input type="text" placeholder="login" name="login" id="login" />
             <label htmlFor="password">Password:</label>

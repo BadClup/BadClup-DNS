@@ -15,7 +15,7 @@
     left: 25%;
     width: 50vw;
     height: 60%;
-    background-color: #141920;
+    background-color: #26303d;
     border-radius: 14px;
     z-index: 100;
     overflow: hidden;
@@ -34,19 +34,17 @@
     cursor: pointer;
     left: 15px;
     font-size: 24px;
-    color: white;
 }
 
 .modal input{
     padding: 10px;
     font-size: 24px;
-    background-color: #141920;
+    background-color: #26303d;
     border: 2px solid #39f;
     border-radius: 9px;
     box-shadow: 0 7px 0px rgb(42, 123, 204);
     text-shadow: 0px 0px 0px rgba(66, 66, 66, .0);
     caret-color: white;
-    color: white;
     max-width: 400px;
 }
 
