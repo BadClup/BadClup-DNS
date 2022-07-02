@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./Button";
 import styles from "./Header.module.css"
-import BadClupLogo from "../../Images/a.svg";
-import dnsPng from "../../Images/DNS2.svg";
+import { ReactComponent as BadclupLogo } from "../../Images/BadClup.svg";
+import { ReactComponent as DnsPng } from "../../Images/DNS.svg";
 
 const Header = (props) =>{
   const openInNewTab = (url) => {
@@ -12,14 +12,12 @@ const Header = (props) =>{
     return (
       <header className={styles.header}>
         <div>
-          <img
-            src={BadClupLogo}
-            alt="BadClup"
-            onClick={() => openInNewTab("http://badclup.com")}
+          <BadclupLogo
+            onClick={() =>
+              openInNewTab("http://badclup.com")
+            }
           />
-          <img
-            src={dnsPng}
-            alt="BadClup"
+          <DnsPng
             onClick={() =>
               openInNewTab("https://pl.wikipedia.org/wiki/Domain_Name_System")
             }

@@ -11,7 +11,8 @@ function App() {
   const firstDesc =
     "You may ask: \"Who you even are? and why should choose your dns?\" So maybe i will introduce us: Hello, my name is Tomasz Mamala, and I am working on this project with my dear friend, Bartłomiej Strama. We are CEO's of BadClup, our small organization with big dreams. We are students from Poland and we attend to one of the best high school in our country. We are creating this project because we were recently thinking about, why nobody did something like us before? Well, the answear is still unknown but we are trying our best to make decent dns system. Please, forgive us for our slight shortcomings, we were not doing anything like that in past, and It's also our first project, which is that big.";
   const secondDesc = "It's very simple! Just follow the steps on the wideo on the side. As DNS server use: 127.0.0.1 as prefered, and 1.1.1.1 as alternate. Of course at the IPv4 section. And that's all, now you can enjoy your own DNS!"
-  const thirdDesc = "Choose BadClup today, for safety and fast DNS system. Of cours, you may ask, \"Why your DNS is diffrent from others?\" Well, at first, it's 100% free, every person can create their own domain. Moreover, the domain isn't .com .org etc. It is your custom name. Keep in mind, that some names may be claimed already."
+  const thirdDesc =
+    "Choose BadClup today, for safety and fast DNS system. Uou may ask, \"What your DNS have, that the others ones have not ?\" Well, at first, it's 100% free, every person can create their own domain. Moreover, the domains aren't .com .org etc. It is your custom name. Of course, every other domain like youtube or facebook will still work. Keep in mind, that some names may be claimed already.";
   
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -65,7 +66,7 @@ function App() {
        <Paragraph
          title="Something about creators"
          desc={firstDesc}
-         spanStyle={{ width: "100%" }}
+         style={{marginBottom: "20px"}}
        />
        {isLoginModal && (
          <Modal
