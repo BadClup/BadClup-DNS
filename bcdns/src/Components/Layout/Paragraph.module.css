@@ -96,20 +96,29 @@
 }
 
 .paragraph section span{
-    border: 2px solid #39f;
     border-radius: 7px;
-    box-shadow: 0 7px 0px rgb(42, 123, 204);
     border-radius: 15px;
     padding: 20px;
     margin: 0 20px;
+    background: rgba(51, 153, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(51, 153, 255, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 2px solid rgba(51, 153, 255, 0.18);
+    box-shadow: 0 7px 0px rgb(42, 123, 204, 0.18);
 }
 
 .paragraph section iframe{
-    border: 2px solid #39f;
     padding: 10px 10px;
     border-radius: 8px;
-    background-color: #39f;
-    box-shadow: 0 7px 0px rgb(42, 123, 204);
+    background: rgba(25, 140, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(51, 153, 255, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 2px solid rgba(51, 153, 255, 0.18);
+    box-shadow: 0 7px 0px rgb(42, 123, 204, 0.18);
 }
 
 .paragraph section img{
