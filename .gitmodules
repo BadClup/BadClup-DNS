@@ -1,0 +1,3 @@
+[submodule "DNS-server"]
+	path = DNS-server
+	url = https://github.com/BadClup/DNS-server.git
