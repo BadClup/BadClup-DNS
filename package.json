@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/BadClup/BadClup-site#readme",
   "dependencies": {
-    "bcdns": "file:bcdns"
+    "bcdns": "file:bcdns",
+    "cors": "^2.8.5",
+    "dns-packet": "^5.4.0",
+    "mongodb": "^4.7.0"
   }
 }
