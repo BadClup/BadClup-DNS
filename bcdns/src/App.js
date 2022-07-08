@@ -1,6 +1,7 @@
 import Header from "./Components/Layout/Header";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
+import Footer from "./Components/Layout/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,8 +24,16 @@ function App() {
                </Fragment>
              }
            />
-           <Route path="/" element={<Home />} />
+           <Route
+             path="/"
+             element={
+               <Fragment>
+                 <Home />
+               </Fragment>
+             }
+           />
          </Routes>
+         <Footer />
        </div>
      </Router>
    );

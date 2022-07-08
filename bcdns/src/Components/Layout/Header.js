@@ -3,7 +3,6 @@ import Button from "./Button";
 import styles from "./Header.module.css"
 import { ReactComponent as BadclupLogo } from "../../Images/BadClup.svg";
 import { ReactComponent as DnsPng } from "../../Images/DNS.svg";
-
 import { useSelector, useDispatch } from "react-redux";
 import { logActions } from "../../Store/Log";
 

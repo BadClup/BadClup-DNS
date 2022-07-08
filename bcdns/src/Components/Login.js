@@ -4,6 +4,14 @@ import { Fragment, useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { logActions } from "../Store/Log";
 
+function post(url, data) {
+  return fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+}
+
 const Login = () => {
   const dispatch = useDispatch();
   const loginRef = useRef(null);
@@ -18,6 +26,7 @@ const Login = () => {
   const [emailInputError, setEmailInputError] = useState(false);
   const [rPasswordInputError, setRPasswordInputError] = useState(false);
   const [domainInputError, setDomainInputError] = useState(false);
+  const [loginError, setLoginError] = useState(false);
 
   const submitLoginFormHandler = (event) => {
     event.preventDefault();
@@ -37,8 +46,20 @@ const Login = () => {
       loginRef.current.value.trim().length !== 0 &&
       passwordRef.current.value.trim().length !== 0
     ){
-      dispatch(logActions.login(loginRef.current.value));
-      window.location = "/";
+      post("http://localhost:5000/login", {
+        login: loginRef.current.value,
+        password: passwordRef.current.value,
+      })
+      .then((data) => data.json())
+      .then((data) => {
+        if(data.isLoggedIn){
+            dispatch(logActions.login(loginRef.current.value));
+            window.location = "/";
+        }else{
+          console.log("chuj")
+          setLoginError(true);
+        }
+      });
     }
     return;
   };
@@ -189,6 +210,7 @@ const Login = () => {
           setLoginInputError(false);
           setPasswordInputError(false);
           setRPasswordInputError(false);
+          setDomainInputError(false);
           setEmailInputError(false);
         }}
       >
