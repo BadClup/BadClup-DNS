@@ -26,7 +26,7 @@ const Login = () => {
   const [emailInputError, setEmailInputError] = useState(false);
   const [rPasswordInputError, setRPasswordInputError] = useState(false);
   const [domainInputError, setDomainInputError] = useState(false);
-  const [loginError, setLoginError] = useState(false);
+  const [accountError, setAccountError] = useState(false);
 
   const submitLoginFormHandler = (event) => {
     event.preventDefault();
@@ -56,8 +56,7 @@ const Login = () => {
             dispatch(logActions.login(loginRef.current.value));
             window.location = "/";
         }else{
-          console.log("chuj")
-          setLoginError(true);
+          setAccountError(true);
         }
       });
     }
@@ -105,11 +104,19 @@ const Login = () => {
         domainSliced[1].length > 0
       )
     ) {
-      return;
+      post("http://localhost:5000/register", {
+        login: loginRef.current.value,
+        password: passwordRef.current.value,
+      })
+        .then((data) => data.json())
+        .then((data) => {
+          if (data.wasRegistered) {
+            window.location = "/";
+          } else {
+            setAccountError(true);
+          }
+        });
     }
-
-    dispatch(logActions.login(loginRef.current.value));
-    window.location = "/";
     return;
   }
  
