@@ -3,8 +3,33 @@
   "version": "1.0.0",
   "description": "Main BadClup site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm start --prefix bcdns"
+    "start": "concurrently -n \"CLIENT,SERVER,DNS\" -c \"blue,magenta,green\" \"npm:start-client\" \"npm:start-server\" \"npm:start-dns\"",
+
+    "start-client": "npm run start --prefix client",
+    "start-server": "npm run start --prefix server",
+    "start-dns": "npm run start --prefix DNS-server",
+
+    "watch": "concurrently -n \"CLIENT,SERVER,DNS\" -c \"blue,magenta,green\" \"npm:watch-client\" \"npm:watch-server\" \"npm:watch-dns\"",
+
+    "watch-client": "npm run watch --prefix client",
+    "watch-server": "npm run watch --prefix server",
+    "watch-dns": "npm run watch --prefix DNS-server",
+
+    "build": "git submodule update --remote --force && npm i --prefix client && npm run build-client && npm run build-server && npm run build-dns && npm i",
+
+    "build-client": "npm run build --prefix client",
+    "build-server": "npm run build --prefix server",
+    "build-dns": "npm run build --prefix DNS-server",
+
+    "mongo-login": "echo \"HTTP-SERVER-LOGIN-COMMAND: npm run mongo-login-server <login> <password>\" && echo \"DNS-LOGIN-COMMAND: npm run mongo-login-dns <login> <password>\" && echo \"\"",
+    "mongo-login-server": "npm run mongo-login --prefix server",
+    "mongo-login-dns": "npm run mongo-login --prefix DNS-server",
+
+    "test": "concurrently -n \"CLIENT,SERVER,DNS\" -c \"blue,magenta,green\" \"npm:test-client\" \"npm:test-server\" \"npm:test-dns\"",
+
+    "test-client": "npm run test --prefix client",
+    "test-server": "npm run test --prefix server",
+    "test-dns": "npm run test --prefix DNS-server"
   },
   "repository": {
     "type": "git",
@@ -17,9 +42,6 @@
   },
   "homepage": "https://github.com/BadClup/BadClup-site#readme",
   "dependencies": {
-    "bcdns": "file:bcdns",
-    "cors": "^2.8.5",
-    "dns-packet": "^5.4.0",
-    "mongodb": "^4.7.0"
+    "concurrently": "^7.3.0"
   }
 }
