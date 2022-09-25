@@ -6,39 +6,31 @@ body {
   background-color: #141920;
   line-height: 1.5;
   overflow-x: hidden;
-  color: #cfd7e2 !important;
-  background-size: cover;
-  background-image: url(./Images/Bg.svg);
+  color: #fffce6 !important;
 }
 
 ::-webkit-input-placeholder {
   color: white;
-  opacity: .8;
 }
 
 :-moz-placeholder {
   color: white;
-  opacity: .8;
 }
 
 ::-moz-placeholder {
   color: white;
-  opacity: .8;
 }
 
 :-ms-input-placeholder {
   color: white;
-  opacity: .8;
 }
 
 ::-ms-input-placeholder {
  color: white;
- opacity: .8;
 }
 
 ::placeholder {
-  color: white;
-  opacity: .8;  
+  color: white; 
 }
 
 ::-webkit-scrollbar {
@@ -50,9 +42,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #39f;
+  background: linear-gradient(45deg, rgb(255, 0, 0), #ffe600);
+  background-size: 200% 200%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(34, 95, 156);
+  background-position: left;
 }

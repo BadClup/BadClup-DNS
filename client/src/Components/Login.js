@@ -94,7 +94,7 @@ const Login = () => {
     }
 
     if (
-      loginRef.current.value.trim().length === 0 ||
+      !(loginRef.current.value.trim().length === 0 ||
       passwordRef.current.value.trim().length === 0 ||
       rPasswordRef.current.value.trim().length === 0 ||
       rPasswordRef.current.value !== passwordRef.current.value ||
@@ -102,7 +102,7 @@ const Login = () => {
         domainSliced.length === 2 &&
         domainSliced[0].length > 0 &&
         domainSliced[1].length > 0
-      )
+      ))
     ) {
       post("http://localhost:5000/register", {
         login: loginRef.current.value,

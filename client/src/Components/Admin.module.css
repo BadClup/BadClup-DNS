@@ -1,4 +1,4 @@
-.formpage{
+.main {
     width: 100vw;
     height: 89vh;
     display: flex;
@@ -8,23 +8,31 @@
     row-gap: 20px;
 }
 
-.formpage p{
-    font-size: 2rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-block-start: 0;
-    margin-block-end: 0;
+.buttons {
+    display: flex;
 }
 
-.formpage form p{
-    font-size: 1.125rem;
+.active {
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) padding-box;
+    top: 3px;
+    box-shadow: 0 2px 20px 0 rgba(112, 176, 240, 0.18);
 }
 
-.loginform{
-    max-width: 70%;
+.buttons:first-of-type > Button {
+    min-width: 137px;
+}
+
+.buttons:last-of-type > Button {
+    padding:  20px 5px;
+}
+
+.adminPanel {
+    min-width: 370px;
+    width: 25%;
+    min-height: 535px;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background: linear-gradient(#141920, #141920) padding-box, linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) border-box;
@@ -33,22 +41,42 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(51, 153, 255, 0.18);
+    position: relative;
 }
 
-.formpage span{
-    position: absolute;
-    top: 15%;
-    cursor: pointer;
-    left: 15px;
-    font-size: 35px;
-    transition: all 200ms ease;
+.adminPanel > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.formpage span:hover{
-    left: 25px;
+.adminPanel p:first-of-type {
+    font-size: 30px;
 }
 
-.input{
+.adminPanel p {
+    font-size: 25px;
+}
+
+.domains {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+}
+
+.domains > Button {
+    margin: 20px 20px;
+    max-width: 35% !important;
+    padding: 20px 5px;
+}
+
+.add {
+    width: calc(100% - 40px);
+    background: #52FF00 !important;
+}
+
+.input {
     margin: 10px 10px;
     padding: 10px;
     font-size: 24px;
@@ -64,14 +92,14 @@
     color: white;
 }
 
-.input:focus, .input:active, .input:hover {
+.input:focus,
+.input:active,
+.input:hover {
     background: linear-gradient(#141920a4, #1419209a) padding-box, linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) border-box;
     top: 3px;
 }
 
-/* 07220604430 pesel jakiegoś pierwszaka*/
-
-.error{
+.error {
     box-shadow: 0 8px 32px 0 rgba(255, 8, 0, 0.658);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -79,60 +107,19 @@
     border: 2px solid rgba(245, 48, 48, 0.664);
 }
 
-.loginform input:focus{
+.input:focus {
     outline: none;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 50px;
-    width: 100%;
-    background-color: transparent;
+.back {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+    font-size: 15px !important;
+    cursor: pointer;
+    transition: left 200ms linear;
 }
 
-.buttons > *{
-    margin: 10px 0;
-    width: 100%;
-    max-width: 100%;
-}
-
-@keyframes slide-down {
-    from {
-        opacity: 0;
-        transform: translateY(-3rem);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes show-up {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .loginform input{
-        width: 100%;
-    }
-    .loginform{
-        left: 0 !important;
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 530px){
-    .formpage span{
-        top: 25%;
-        font-size: 35px;
-    }
+.back:hover {
+    left: 25px;
 }

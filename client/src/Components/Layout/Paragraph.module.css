@@ -9,7 +9,7 @@
     width: 95%;
     left: 2.5%;
     height: 3px;
-    background-color: #39f;
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0));
     bottom: 0;
     border-radius: 8px;
 }
@@ -19,33 +19,25 @@
 }
 
 .paragraph p{
-    transition: color 500ms ease-in-out;
+    transition: color .5s ease-in-out;
     display: inline-block;
     font-size: 3rem;
     margin-left: 5%;
     margin-right: 5%;
     position: relative;
-    text-shadow:
-            0 1px 0 #2e2e2e,
-            0 2px 0 #2c2c2c,
-            0 3px 0 #2a2a2a,
-            0 4px 0 #282828,
-            0 5px 0 #262626,
-            0 6px 0 #242424,
-            0 7px 0 #222,
-            0 8px 0 #202020,
-            0 9px 0 #1e1e1e,
-            0 10px 0 #1c1c1c,
-            0 11px 0 #1a1a1a,
-            0 12px 0 #181818,
-            0 13px 0 #161616,
-            0 14px 0 #141414,
-            0 15px 0 #121212,
-            0 22px 30px rgba(78, 78, 78, 0.9);
+    background-size: 200% 200%;
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.paragraph p:hover {
+    color: rgba(0, 0, 0, 0);
+    background-position: left;
 }
 
 .paragraph p::after{
-    transform: scale(.3);
+    transform: scaleX(.3);
     content: '';
     position: absolute;
     width: auto;
@@ -54,18 +46,14 @@
     left: 0px;
     height: 3.5px;
     transform-origin: left;
-    background-color: #d9d9d9;
-    transition: background-color 500ms, transform 500ms ease-in-out;
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0));
+    transition: transform 500ms ease-in-out;
     border-radius: 8px;
 }
 
 .paragraph p:hover::after{
-    transform: scale(1);
+    transform: scaleX(1);
     background-color: #39f;
-}
-
-.paragraph p:hover{
-    color: #39f;
 }
 
 .paragraph section{
@@ -100,25 +88,23 @@
     border-radius: 15px;
     padding: 20px;
     margin: 0 20px;
-    background: rgba(51, 153, 255, 0.18);
+    background: linear-gradient(#141920, #141920) padding-box, linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) border-box;
     box-shadow: 0 8px 32px 0 rgba(51, 153, 255, 0.18);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 2px solid rgba(51, 153, 255, 0.18);
-    box-shadow: 0 7px 0px rgb(42, 123, 204, 0.18);
+    border: 2px solid transparent;
 }
 
 .paragraph section iframe{
     padding: 10px 10px;
     border-radius: 8px;
-    background: rgba(25, 140, 255, 0.18);
+    background: linear-gradient(#141920, #141920) padding-box, linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) border-box;
     box-shadow: 0 8px 32px 0 rgba(51, 153, 255, 0.18);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 2px solid rgba(51, 153, 255, 0.18);
-    box-shadow: 0 7px 0px rgb(42, 123, 204, 0.18);
+    border: 2px solid transparent;
 }
 
 .paragraph section img{

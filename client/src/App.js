@@ -1,13 +1,10 @@
 import Header from "./Components/Layout/Header";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
+import NotFound from "./Components/NotFound";
 import Footer from "./Components/Layout/Footer";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Admin from "./Components/Admin";
 
 function App() {
    return (
@@ -15,23 +12,10 @@ function App() {
        <div className="App">
          <Header />
          <Routes>
-           <Route
-             exact
-             path="/login"
-             element={
-               <Fragment>
-                 <Login />
-               </Fragment>
-             }
-           />
-           <Route
-             path="/"
-             element={
-               <Fragment>
-                 <Home />
-               </Fragment>
-             }
-           />
+           <Route path="*" element={<NotFound />} />
+           <Route path="/login" element={<Login />} />
+           <Route path="/admin" element={<Admin />} />
+           <Route path="/" element={<Home />} />
          </Routes>
          <Footer />
        </div>

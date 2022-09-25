@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const sessionIsLoggedIn = sessionStorage.getItem("isLoggedIn") || false;
-const sessionLogin = sessionStorage.getItem("login") || undefined;
+const sessionIsLoggedIn = sessionStorage.getItem("isLoggedIn") || true;
+const sessionLogin = sessionStorage.getItem("login") || "gonwo";
 
 const initialLogState = { isLoggedIn: sessionIsLoggedIn, login: sessionLogin };
 

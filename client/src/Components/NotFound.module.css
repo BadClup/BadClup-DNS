@@ -1,0 +1,11 @@
+.centered {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.centered img {
+    margin-top: 100px;
+    width: 300px;
+}
