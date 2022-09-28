@@ -74,6 +74,20 @@
 .add {
     width: calc(100% - 40px);
     background: #52FF00 !important;
+    color: #141920 !important;
+}
+
+.smallAdd {
+    width: calc(30% - 40px);
+    background: #52FF00 !important;
+    padding: 5px;
+    color: #141920 !important;
+    height: 60%;
+}
+
+.delete {
+    width: calc(100% - 40px);
+    background: #F94C4C !important;
 }
 
 .input {
@@ -88,7 +102,7 @@
     border-radius: 10px;
     border: 2px solid rgba(51, 153, 255, 0.18);
     caret-color: white;
-    margin-top: 25px;
+    margin-top: 15px;
     color: white;
 }
 
@@ -122,4 +136,69 @@
 
 .back:hover {
     left: 25px;
+}
+
+.userInfoFlex {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: center !important;
+}
+
+.userInfoFlex > input,
+.userInfoFlex > textarea {
+    width: 80%;
+    margin-top: 10px !important;
+    resize: vertical;
+}
+
+.warningText {
+    position: absolute;
+    left: 31%;
+    top: 10%;
+    font-size: 14px !important;
+}
+
+.secondWarningText {
+    left: 33%;
+}
+
+.checkboxFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+}
+
+.checkboxFlex > input[type="checkbox"] {
+    appearance: none;
+    background-color: #141920;
+    border-radius: 6px;
+}
+
+.checkboxFlex > input::hover {
+    top: 0px !important;
+}
+
+.checkboxFlex > input[type="checkbox"]:checked {
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) border-box;
+}
+
+.jsonbtn {
+    width: calc(100% - 40px);
+    background: linear-gradient(45deg, #ffe600, rgb(255, 0, 0)) padding-box;
+    color: #141920 !important;
+}
+
+.editDomainFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    flex-direction: row !important;
+}
+
+.editDomainFlex > img {
+    width: 32px;
+    cursor: pointer;
 }

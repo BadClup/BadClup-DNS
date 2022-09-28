@@ -122,6 +122,7 @@ const Login = () => {
  
   const loginForm = (
     <Fragment>
+      {accountError && <p>Error while logging to an account</p>}
       <p>Sign In</p>
       <form className={styles.loginform} onSubmit={submitLoginFormHandler}>
         <input
